@@ -1,4 +1,4 @@
-module golang.org/x/oauth2
+module github.com/nmccready/oauth2
 
 go 1.18
 

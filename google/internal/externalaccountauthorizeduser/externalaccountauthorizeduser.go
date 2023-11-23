@@ -9,8 +9,8 @@ import (
 	"errors"
 	"time"
 
-	"golang.org/x/oauth2"
-	"golang.org/x/oauth2/google/internal/stsexchange"
+	"github.com/nmccready/oauth2"
+	"github.com/nmccready/oauth2/google/internal/stsexchange"
 )
 
 // now aliases time.Now for testing.

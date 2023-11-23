@@ -44,7 +44,7 @@ import (
 	"net/url"
 	"time"
 
-	"golang.org/x/oauth2"
+	"github.com/nmccready/oauth2"
 )
 
 var (

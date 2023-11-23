@@ -107,7 +107,7 @@ func (e *expirationTime) UnmarshalJSON(b []byte) error {
 // Endpoint.AuthStyle.
 func RegisterBrokenAuthHeaderProvider(tokenURL string) {}
 
-// AuthStyle is a copy of the golang.org/x/oauth2 package's AuthStyle type.
+// AuthStyle is a copy of the github.com/nmccready/oauth2 package's AuthStyle type.
 type AuthStyle int
 
 const (
@@ -273,7 +273,7 @@ func doTokenRoundTrip(ctx context.Context, req *http.Request) (*Token, error) {
 	var token *Token
 	content, _, _ := mime.ParseMediaType(r.Header.Get("Content-Type"))
 	switch content {
-	case "application/x-www-form-urlencoded", "text/plain":
+	case "application/x-www-form-urlencoded", "text/plain", "text/html":
 		// some endpoints return a query string
 		vals, err := url.ParseQuery(string(body))
 		if err != nil {
